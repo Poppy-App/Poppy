@@ -76,4 +76,4 @@ Poppy allows college students to skip the hassles associated with selling and bu
 <img src="https://i.imgur.com/kLBu9cD.png" alt="drawing" width="200"/>
 <img src="https://i.imgur.com/uho6nYk.png" alt="drawing" width="200"/>
 <img src="https://i.imgur.com/Qe63GDU.png" alt="drawing" width="200"/>
-<img src="https://i.imgur.com/rvUTW8X.png" alt="drawing" width="200"/>
+<img src="https://i.imgur.com/fjLo16D.png" alt="drawing" width="200"/>
