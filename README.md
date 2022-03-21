@@ -63,7 +63,7 @@ Poppy allows college students to skip the hassles associated with selling and bu
 
 **Flow Navigation** (Screen to Screen)
 
-* Login/Sign-in Screen [default start screen when you open app for first time]
+* Login/Sign-in Screen [default start screen when you open app for first time, also by clicking logout button in settings screen]
 * Screen which shows listings [arrive at this screen directly from login/signup]
 * Screen that shows addional info [arrive at this screen after clicking on a listing]
 * Payment screen [arrive at this screen by cliicking the buy now button on on the additonal info screen]
