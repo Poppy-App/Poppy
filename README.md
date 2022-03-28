@@ -63,7 +63,7 @@ Poppy allows college students to skip the hassles associated with selling and bu
 
 **Flow Navigation** (Screen to Screen)
 
-* Login/Sign-in Screen [default start screen when you open app for first time, also by clicking logout button in settings screen]
+* Login/Sign-in Screen [default start screen when you open app for first time]
 * Screen which shows listings [arrive at this screen directly from login/signup]
 * Screen that shows addional info [arrive at this screen after clicking on a listing]
 * Payment screen [arrive at this screen by cliicking the buy now button on on the additonal info screen]
@@ -77,3 +77,116 @@ Poppy allows college students to skip the hassles associated with selling and bu
 <img src="https://i.imgur.com/uho6nYk.png" alt="drawing" width="200"/>
 <img src="https://i.imgur.com/Qe63GDU.png" alt="drawing" width="200"/>
 <img src="https://i.imgur.com/fjLo16D.png" alt="drawing" width="200"/>
+
+
+
+
+
+
+
+
+
+## Schema 
+### Models
+#### Listing
+| Property    | Type              | Description               |
+| ----------- | ----------------- | ------------------------- |
+| Listing ID  | long              | unique id for listing     |
+| User        | Pointer to User   | listing seller            |
+| Description | Text              | information about listing |
+| Price       | Integer           | listing price             |
+
+#### User
+| Property     | Type   | Description           |
+| ------------ | ------ | --------------------- |
+| Name         | String | Seller name           |
+| College      | String | Seller's College      |
+| ItemsSold    | int    | # of items sold       |
+| College Year | String | 1st, 2nd, 3rd etc.    |
+| Bio          | String | information on seller |
+| Payment Info |        | Apple pay value       |
+| Email        | String | School Email          |
+| Password     | String | Login Password        |
+
+
+
+### Networking
+- List of network requests by screen:
+    1. Login Screen - Authentication from Firebase
+
+    ```
+    Firebase.Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+      guard let strongSelf = self else { return }
+      // ...
+    }
+    ```
+    2. Create Account Screen - Authentication from Firebase
+
+    ```
+    Firebase.Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+      // ...
+    }
+    ```
+
+    3. Feed Screen - Request postings from Firebase
+
+    ```
+    let postsRef = Firestore.firestore().collection("listing")
+    ```
+
+
+    4. More information - Firebase API to get information, Apple Pay API to pay, Apple Maps to get location
+
+    ```
+    \\firebase
+    let infoRef = Firestore.firestore().collection("users")
+    ```
+    ```
+    \\apple maps
+    mapkit.init({
+        authorizationCallback: function(done) {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "/services/jwt");
+            xhr.addEventListener("load", function() {
+                done(this.responseText);
+            });
+            xhr.send();
+        }
+    });
+    var map = new mapkit.Map("map", {
+        isRotationEnabled: false,
+        isZoomEnabled: false,
+        showsZoomControl: false
+    });
+  ```
+  ```
+  \\apple pay
+    let ticket = PKPaymentSummaryItem(label: "Festival Entry", amount: NSDecimalNumber(string: "9.99"), type: .final)
+    let tax = PKPaymentSummaryItem(label: "Tax", amount: NSDecimalNumber(string: "1.00"), type: .final)
+    let total = PKPaymentSummaryItem(label: "Total", amount: NSDecimalNumber(string: "10.99"), type: .final)
+    paymentSummaryItems = [ticket, tax, total]
+    let paymentRequest = PKPaymentRequest()
+    paymentRequest.paymentSummaryItems = paymentSummaryItems
+    paymentRequest.merchantIdentifier = Configuration.Merchant.identifier
+    paymentRequest.merchantCapabilities = .capability3DS
+    paymentRequest.countryCode = "US"
+    paymentRequest.currencyCode = "USD"
+    paymentRequest.supportedNetworks = PaymentHandler.supportedNetworks
+    paymentRequest.shippingType = .delivery
+    paymentRequest.shippingMethods = shippingMethodCalculator()
+    paymentRequest.requiredShippingContactFields = [.name, .postalAddress]
+    #if !os(watchOS)
+    paymentRequest.supportsCouponCode = true
+    #endif`
+    paymentController = PKPaymentAuthorizationController(paymentRequest: paymentRequest)
+    paymentController?.delegate = self
+    paymentController?.present(completion: { (presented: Bool) in
+        if presented {
+            debugPrint("Presented payment controller")
+        } else {
+            debugPrint("Failed to present payment controller")
+            self.completionHandler(false)
+        }
+    })
+    
+  ```
