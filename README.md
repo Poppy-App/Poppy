@@ -161,32 +161,32 @@ Poppy allows college students to skip the hassles associated with selling and bu
   ```
   ```
   \\apple pay
-    let ticket = PKPaymentSummaryItem(label: "Festival Entry", amount: NSDecimalNumber(string: "9.99"), type: .final)
-    let tax = PKPaymentSummaryItem(label: "Tax", amount: NSDecimalNumber(string: "1.00"), type: .final)
-    let total = PKPaymentSummaryItem(label: "Total", amount: NSDecimalNumber(string: "10.99"), type: .final)
-    paymentSummaryItems = [ticket, tax, total]
-    let paymentRequest = PKPaymentRequest()
-    paymentRequest.paymentSummaryItems = paymentSummaryItems
-    paymentRequest.merchantIdentifier = Configuration.Merchant.identifier
-    paymentRequest.merchantCapabilities = .capability3DS
-    paymentRequest.countryCode = "US"
-    paymentRequest.currencyCode = "USD"
-    paymentRequest.supportedNetworks = PaymentHandler.supportedNetworks
-    paymentRequest.shippingType = .delivery
-    paymentRequest.shippingMethods = shippingMethodCalculator()
-    paymentRequest.requiredShippingContactFields = [.name, .postalAddress]
-    #if !os(watchOS)
-    paymentRequest.supportsCouponCode = true
-    #endif`
-    paymentController = PKPaymentAuthorizationController(paymentRequest: paymentRequest)
-    paymentController?.delegate = self
-    paymentController?.present(completion: { (presented: Bool) in
-        if presented {
-            debugPrint("Presented payment controller")
-        } else {
-            debugPrint("Failed to present payment controller")
-            self.completionHandler(false)
-        }
-    })
+  let ticket = PKPaymentSummaryItem(label: "Festival Entry", amount: NSDecimalNumber(string: "9.99"), type: .final)
+  let tax = PKPaymentSummaryItem(label: "Tax", amount: NSDecimalNumber(string: "1.00"), type: .final)
+  let total = PKPaymentSummaryItem(label: "Total", amount: NSDecimalNumber(string: "10.99"), type: .final)
+  paymentSummaryItems = [ticket, tax, total]
+  let paymentRequest = PKPaymentRequest()
+  paymentRequest.paymentSummaryItems = paymentSummaryItems
+  paymentRequest.merchantIdentifier = Configuration.Merchant.identifier
+  paymentRequest.merchantCapabilities = .capability3DS
+  paymentRequest.countryCode = "US"
+  paymentRequest.currencyCode = "USD"
+  paymentRequest.supportedNetworks = PaymentHandler.supportedNetworks
+  paymentRequest.shippingType = .delivery
+  paymentRequest.shippingMethods = shippingMethodCalculator()
+  paymentRequest.requiredShippingContactFields = [.name, .postalAddress]
+  #if !os(watchOS)
+  paymentRequest.supportsCouponCode = true
+  #endif`
+  paymentController = PKPaymentAuthorizationController(paymentRequest: paymentRequest)
+  paymentController?.delegate = self
+  paymentController?.present(completion: { (presented: Bool) in
+      if presented {
+          debugPrint("Presented payment controller")
+      } else {
+          debugPrint("Failed to present payment controller")
+          self.completionHandler(false)
+      }
+  })
     
   ```
