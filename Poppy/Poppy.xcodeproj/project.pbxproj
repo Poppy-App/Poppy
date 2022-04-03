@@ -16,7 +16,7 @@
 		7A0C0B2227F2561600567393 /* PoppyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0C0B2127F2561600567393 /* PoppyTests.swift */; };
 		7A0C0B2C27F2561600567393 /* PoppyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0C0B2B27F2561600567393 /* PoppyUITests.swift */; };
 		7A0C0B2E27F2561600567393 /* PoppyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0C0B2D27F2561600567393 /* PoppyUITestsLaunchTests.swift */; };
-		A31635EB27F258080029077E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A31635EA27F258080029077E /* GoogleService-Info.plist */; };
+		7A506CF627FA0A0400F791F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A506CF527FA0A0400F791F9 /* GoogleService-Info.plist */; };
 		A31635EE27F25CE00029077E /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A31635ED27F25CE00029077E /* FirebaseAnalytics */; };
 		A31635F027F25CE00029077E /* FirebaseAnalyticsSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = A31635EF27F25CE00029077E /* FirebaseAnalyticsSwift-Beta */; };
 		A31635F227F25CE00029077E /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = A31635F127F25CE00029077E /* FirebaseAnalyticsWithoutAdIdSupport */; };
@@ -78,7 +78,7 @@
 		7A0C0B2727F2561600567393 /* PoppyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoppyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A0C0B2B27F2561600567393 /* PoppyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoppyUITests.swift; sourceTree = "<group>"; };
 		7A0C0B2D27F2561600567393 /* PoppyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoppyUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		A31635EA27F258080029077E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7A506CF527FA0A0400F791F9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +157,7 @@
 		7A0C0B0927F2561600567393 /* Poppy */ = {
 			isa = PBXGroup;
 			children = (
+				7A506CF527FA0A0400F791F9 /* GoogleService-Info.plist */,
 				7A0C0B0A27F2561600567393 /* AppDelegate.swift */,
 				7A0C0B0C27F2561600567393 /* SceneDelegate.swift */,
 				7A0C0B0E27F2561600567393 /* ViewController.swift */,
@@ -164,7 +165,6 @@
 				7A0C0B1327F2561600567393 /* Assets.xcassets */,
 				7A0C0B1527F2561600567393 /* LaunchScreen.storyboard */,
 				7A0C0B1827F2561600567393 /* Info.plist */,
-				A31635EA27F258080029077E /* GoogleService-Info.plist */,
 			);
 			path = Poppy;
 			sourceTree = "<group>";
@@ -324,7 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A0C0B1727F2561600567393 /* LaunchScreen.storyboard in Resources */,
-				A31635EB27F258080029077E /* GoogleService-Info.plist in Resources */,
+				7A506CF627FA0A0400F791F9 /* GoogleService-Info.plist in Resources */,
 				7A0C0B1427F2561600567393 /* Assets.xcassets in Resources */,
 				7A0C0B1227F2561600567393 /* Main.storyboard in Resources */,
 			);
