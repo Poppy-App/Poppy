@@ -16,6 +16,7 @@
 		7A0C0B2C27F2561600567393 /* PoppyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0C0B2B27F2561600567393 /* PoppyUITests.swift */; };
 		7A0C0B2E27F2561600567393 /* PoppyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0C0B2D27F2561600567393 /* PoppyUITestsLaunchTests.swift */; };
 		7A4FA0AA27FA4BB60071ACFE /* ListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4FA0A927FA4BB60071ACFE /* ListingViewController.swift */; };
+		7A4FA0AC27FA980D0071ACFE /* ListingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4FA0AB27FA980D0071ACFE /* ListingCell.swift */; };
 		7A506CF627FA0A0400F791F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A506CF527FA0A0400F791F9 /* GoogleService-Info.plist */; };
 		7A506CF827FA132C00F791F9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A506CF727FA132C00F791F9 /* LoginViewController.swift */; };
 		7A506CFA27FA1ECF00F791F9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A506CF927FA1ECF00F791F9 /* SignUpViewController.swift */; };
@@ -80,6 +81,7 @@
 		7A0C0B2B27F2561600567393 /* PoppyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoppyUITests.swift; sourceTree = "<group>"; };
 		7A0C0B2D27F2561600567393 /* PoppyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoppyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7A4FA0A927FA4BB60071ACFE /* ListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingViewController.swift; sourceTree = "<group>"; };
+		7A4FA0AB27FA980D0071ACFE /* ListingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingCell.swift; sourceTree = "<group>"; };
 		7A506CF527FA0A0400F791F9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7A506CF727FA132C00F791F9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7A506CF927FA1ECF00F791F9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				7A0C0B1827F2561600567393 /* Info.plist */,
 				7A506CF927FA1ECF00F791F9 /* SignUpViewController.swift */,
 				7A4FA0A927FA4BB60071ACFE /* ListingViewController.swift */,
+				7A4FA0AB27FA980D0071ACFE /* ListingCell.swift */,
 			);
 			path = Poppy;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A4FA0AC27FA980D0071ACFE /* ListingCell.swift in Sources */,
 				7A506CF827FA132C00F791F9 /* LoginViewController.swift in Sources */,
 				7A0C0B0B27F2561600567393 /* AppDelegate.swift in Sources */,
 				7A506CFA27FA1ECF00F791F9 /* SignUpViewController.swift in Sources */,
