@@ -26,20 +26,21 @@ Poppy allows college students to skip the hassles associated with selling and bu
 
 **Required Must-have Stories**
 
-* Login screen with user authentication
-* Take pictures of a product and upload them to the platform along with description
-* Payment interface to allow users to pay others for their product
-* Render all the availible products on the screen
-* Sign up with their school email and specify university name
-* Filter by price and categories
-* View more information about listing
-* Settings screen where user can change name and description about themselves
+- [X] Login screen with user authentication
+- [X] Create account screen with their school email and specify university name
+- [X] Logout Functionality
+- [X] Render all the availible products on the screen (partially implimented - table view works we just need to design the cell at add the listings)
+- [ ] Take pictures of a product and upload them to the platform along with description
+- [ ] Payment interface to allow users to pay others for their product
+- [ ] Filter by price and categories
+- [ ] View more information about listing
+- [ ] Settings screen where user can change name and description about themselves
 
 **Optional Nice-to-have Stories**
 
-* Chat between buyers and sellers
-* Users can add profile picture
-* Map to show product location
+- [ ] Chat between buyers and sellers
+- [ ] Users can add profile picture
+- [ ] Map to show product location
 
 ### 2. Screen Archetypes
 
@@ -190,3 +191,7 @@ Poppy allows college students to skip the hassles associated with selling and bu
   })
     
   ```
+  ### Sprint 1 Progress GIF
+  <img src='Poppy_Sprint1.gif' title='Video Walkthrough' width=250 alt='Video Walkthrough' />
+
+
