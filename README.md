@@ -29,7 +29,7 @@ Poppy allows college students to skip the hassles associated with selling and bu
 - [X] Login screen with user authentication
 - [X] Create account screen with their school email and specify university name
 - [X] Logout Functionality
-- [/] Render all the availible products on the screen (partially implimented - table view works we just need to design the cell at add the listings)
+- [X] Render all the availible products on the screen (partially implimented - table view works we just need to design the cell at add the listings)
 - [ ] Take pictures of a product and upload them to the platform along with description
 - [ ] Payment interface to allow users to pay others for their product
 - [ ] Filter by price and categories
