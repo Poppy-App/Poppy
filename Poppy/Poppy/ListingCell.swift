@@ -8,7 +8,9 @@
 import UIKit
 
 class ListingCell: UITableViewCell {
-    @IBOutlet weak var randLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
