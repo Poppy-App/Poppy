@@ -222,9 +222,15 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Thf-lZ-MYg">
-                                            <rect key="frame" x="20" y="122" width="45" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Thf-lZ-MYg">
+                                            <rect key="frame" x="226" y="122" width="196" height="21"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgK-DX-eqj">
+                                            <rect key="frame" x="20" y="121" width="156" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -232,15 +238,23 @@
                                     <constraints>
                                         <constraint firstItem="6VW-n9-NqJ" firstAttribute="top" secondItem="gq8-To-kOs" secondAttribute="top" constant="6" id="AHK-zH-wmN"/>
                                         <constraint firstItem="6VW-n9-NqJ" firstAttribute="top" secondItem="gq8-To-kOs" secondAttribute="top" constant="6" id="JIf-h7-p5q"/>
-                                        <constraint firstItem="Thf-lZ-MYg" firstAttribute="leading" secondItem="ho1-UM-wf7" secondAttribute="leading" id="KKo-sv-Ohv"/>
+                                        <constraint firstItem="Thf-lZ-MYg" firstAttribute="leading" secondItem="ho1-UM-wf7" secondAttribute="leading" constant="206" id="KKo-sv-Ohv"/>
+                                        <constraint firstItem="bgK-DX-eqj" firstAttribute="top" secondItem="ho1-UM-wf7" secondAttribute="bottom" constant="7" id="L6V-hd-hc9"/>
+                                        <constraint firstItem="Thf-lZ-MYg" firstAttribute="leading" secondItem="bgK-DX-eqj" secondAttribute="trailing" constant="50" id="M8d-iN-FI4"/>
+                                        <constraint firstAttribute="bottom" secondItem="Thf-lZ-MYg" secondAttribute="bottom" constant="1" id="P2I-Qj-yJ3"/>
                                         <constraint firstAttribute="bottom" secondItem="Thf-lZ-MYg" secondAttribute="bottom" constant="1" id="UAM-vP-0HW"/>
                                         <constraint firstItem="ho1-UM-wf7" firstAttribute="trailing" secondItem="6VW-n9-NqJ" secondAttribute="trailing" id="UJs-Rs-QfJ"/>
-                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Thf-lZ-MYg" secondAttribute="trailing" constant="20" symbolic="YES" id="YiY-Tq-ueJ"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Thf-lZ-MYg" secondAttribute="trailing" constant="6" id="YiY-Tq-ueJ"/>
+                                        <constraint firstItem="bgK-DX-eqj" firstAttribute="leading" secondItem="gq8-To-kOs" secondAttribute="leading" constant="20" id="e5f-Fb-LVg"/>
                                         <constraint firstAttribute="bottom" secondItem="ho1-UM-wf7" secondAttribute="bottom" constant="30" id="idk-Dx-pTA"/>
                                         <constraint firstItem="ho1-UM-wf7" firstAttribute="top" secondItem="6VW-n9-NqJ" secondAttribute="bottom" constant="8" id="jIA-0c-yTB"/>
+                                        <constraint firstItem="Thf-lZ-MYg" firstAttribute="top" secondItem="ho1-UM-wf7" secondAttribute="bottom" constant="8" id="kaI-PD-9Q4"/>
                                         <constraint firstItem="ho1-UM-wf7" firstAttribute="top" secondItem="6VW-n9-NqJ" secondAttribute="bottom" constant="8" id="kmZ-wT-HvE"/>
                                         <constraint firstItem="ho1-UM-wf7" firstAttribute="top" secondItem="6VW-n9-NqJ" secondAttribute="bottom" constant="8" id="mfa-6z-lEh"/>
+                                        <constraint firstAttribute="bottom" secondItem="bgK-DX-eqj" secondAttribute="bottom" constant="2" id="odn-Ls-TpM"/>
+                                        <constraint firstAttribute="trailing" secondItem="Thf-lZ-MYg" secondAttribute="trailing" constant="6" id="oer-Ed-Kn2"/>
                                         <constraint firstItem="ho1-UM-wf7" firstAttribute="leading" secondItem="gq8-To-kOs" secondAttribute="leadingMargin" id="oh4-EI-S6N"/>
+                                        <constraint firstItem="Thf-lZ-MYg" firstAttribute="leading" secondItem="gq8-To-kOs" secondAttribute="leading" constant="226" id="qKD-5c-oTN"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="ho1-UM-wf7" secondAttribute="trailing" constant="-14" id="qty-Am-bKO"/>
                                         <constraint firstItem="Thf-lZ-MYg" firstAttribute="top" secondItem="ho1-UM-wf7" secondAttribute="bottom" constant="8" id="yc7-Cr-t7w"/>
                                         <constraint firstItem="ho1-UM-wf7" firstAttribute="leading" secondItem="6VW-n9-NqJ" secondAttribute="leading" id="yoO-Fh-XzV"/>
@@ -249,6 +263,7 @@
                                 <connections>
                                     <outlet property="descriptionLabel" destination="ho1-UM-wf7" id="mju-yz-fQz"/>
                                     <outlet property="priceLabel" destination="Thf-lZ-MYg" id="aLB-IC-1aC"/>
+                                    <outlet property="sender_label" destination="bgK-DX-eqj" id="oq5-cq-OdV"/>
                                     <outlet property="titleLabel" destination="6VW-n9-NqJ" id="SaQ-LV-Ybc"/>
                                 </connections>
                             </tableViewCell>
