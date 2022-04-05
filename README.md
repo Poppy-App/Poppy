@@ -96,6 +96,8 @@ Poppy allows college students to skip the hassles associated with selling and bu
 | User        | Pointer to User   | listing seller            |
 | Description | Text              | information about listing |
 | Price       | Integer           | listing price             |
+| Condition   | Text              | Condition of item         |
+| Age         | Integer           | Age of Item               |
 
 #### User
 | Property     | Type   | Description           |
