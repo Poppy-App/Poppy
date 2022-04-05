@@ -17,7 +17,6 @@
 		7A0C0B2E27F2561600567393 /* PoppyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0C0B2D27F2561600567393 /* PoppyUITestsLaunchTests.swift */; };
 		7A4FA0AA27FA4BB60071ACFE /* ListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4FA0A927FA4BB60071ACFE /* ListingViewController.swift */; };
 		7A4FA0AC27FA980D0071ACFE /* ListingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4FA0AB27FA980D0071ACFE /* ListingCell.swift */; };
-		7A506CF627FA0A0400F791F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A506CF527FA0A0400F791F9 /* GoogleService-Info.plist */; };
 		7A506CF827FA132C00F791F9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A506CF727FA132C00F791F9 /* LoginViewController.swift */; };
 		7A506CFA27FA1ECF00F791F9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A506CF927FA1ECF00F791F9 /* SignUpViewController.swift */; };
 		A31635EE27F25CE00029077E /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A31635ED27F25CE00029077E /* FirebaseAnalytics */; };
@@ -48,6 +47,8 @@
 		A316362027F25CE00029077E /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = A316361F27F25CE00029077E /* FirebaseStorage */; };
 		A316362227F25CE00029077E /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = A316362127F25CE00029077E /* FirebaseStorageCombine-Community */; };
 		A316362427F25CE00029077E /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = A316362327F25CE00029077E /* FirebaseStorageSwift-Beta */; };
+		D23C12BC27FCC1220077BE51 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D23C12BB27FCC1220077BE51 /* GoogleService-Info.plist */; };
+		D23C12BF27FCC41A0077BE51 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = D23C12BE27FCC41A0077BE51 /* AlamofireImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,9 +83,9 @@
 		7A0C0B2D27F2561600567393 /* PoppyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoppyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7A4FA0A927FA4BB60071ACFE /* ListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingViewController.swift; sourceTree = "<group>"; };
 		7A4FA0AB27FA980D0071ACFE /* ListingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingCell.swift; sourceTree = "<group>"; };
-		7A506CF527FA0A0400F791F9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7A506CF727FA132C00F791F9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7A506CF927FA1ECF00F791F9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		D23C12BB27FCC1220077BE51 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +97,7 @@
 				A316360027F25CE00029077E /* FirebaseDatabaseSwift-Beta in Frameworks */,
 				A316360227F25CE00029077E /* FirebaseDynamicLinks in Frameworks */,
 				A31635F427F25CE00029077E /* FirebaseAppCheck in Frameworks */,
+				D23C12BF27FCC41A0077BE51 /* AlamofireImage in Frameworks */,
 				A31635F827F25CE00029077E /* FirebaseAuth in Frameworks */,
 				A316362427F25CE00029077E /* FirebaseStorageSwift-Beta in Frameworks */,
 				A31635F027F25CE00029077E /* FirebaseAnalyticsSwift-Beta in Frameworks */,
@@ -163,7 +165,7 @@
 		7A0C0B0927F2561600567393 /* Poppy */ = {
 			isa = PBXGroup;
 			children = (
-				7A506CF527FA0A0400F791F9 /* GoogleService-Info.plist */,
+				D23C12BB27FCC1220077BE51 /* GoogleService-Info.plist */,
 				7A0C0B0A27F2561600567393 /* AppDelegate.swift */,
 				7A0C0B0C27F2561600567393 /* SceneDelegate.swift */,
 				7A0C0B1027F2561600567393 /* Main.storyboard */,
@@ -240,6 +242,7 @@
 				A316361F27F25CE00029077E /* FirebaseStorage */,
 				A316362127F25CE00029077E /* FirebaseStorageCombine-Community */,
 				A316362327F25CE00029077E /* FirebaseStorageSwift-Beta */,
+				D23C12BE27FCC41A0077BE51 /* AlamofireImage */,
 			);
 			productName = Poppy;
 			productReference = 7A0C0B0727F2561600567393 /* Poppy.app */;
@@ -315,6 +318,7 @@
 			mainGroup = 7A0C0AFE27F2561600567393;
 			packageReferences = (
 				A31635EC27F25CE00029077E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				D23C12BD27FCC41A0077BE51 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 			);
 			productRefGroup = 7A0C0B0827F2561600567393 /* Products */;
 			projectDirPath = "";
@@ -333,7 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A0C0B1727F2561600567393 /* LaunchScreen.storyboard in Resources */,
-				7A506CF627FA0A0400F791F9 /* GoogleService-Info.plist in Resources */,
+				D23C12BC27FCC1220077BE51 /* GoogleService-Info.plist in Resources */,
 				7A0C0B1427F2561600567393 /* Assets.xcassets in Resources */,
 				7A0C0B1227F2561600567393 /* Main.storyboard in Resources */,
 			);
@@ -544,6 +548,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 67H6H74V6P;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Poppy/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -556,7 +561,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.poppy.Poppy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.poppy.Poppy1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -571,6 +576,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 67H6H74V6P;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Poppy/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -583,7 +589,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.poppy.Poppy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.poppy.Poppy1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -711,6 +717,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 8.0.0;
+			};
+		};
+		D23C12BD27FCC41A0077BE51 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage";
+			requirement = {
+				branch = master;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -855,6 +869,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A31635EC27F25CE00029077E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageSwift-Beta";
+		};
+		D23C12BE27FCC41A0077BE51 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D23C12BD27FCC41A0077BE51 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

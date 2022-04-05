@@ -12,7 +12,11 @@ class ListingCell: UITableViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     
+    @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var sender_label: UILabel!
+    
+    @IBOutlet weak var detailsLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
