@@ -9,7 +9,9 @@ import UIKit
 import Firebase
 import AlamofireImage
 
+
 class ListingViewController: UITableViewController {
+    var listings:[[String:Any]] = [[String:Any]]()
     @IBAction func Logout(_ sender: Any) {
         do {
             try Firebase.Auth.auth().signOut()
@@ -24,13 +26,35 @@ class ListingViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.delegate = self
+        tableView.dataSource = self
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.listings.removeAll()
+        
+        let listingRef = Firestore.firestore().collection("listing")
+        
+        listingRef.limit(to: 20).getDocuments{QuerySnapshot, error in
+            if let err = error {
+                print("error retrieving listings")
+                return
+            }
+            for document in QuerySnapshot!.documents {
+                self.listings.append(document.data())
+                
+            }
+            self.tableView.reloadData()
+        }
+        
+        
     }
 
     // MARK: - Table view data source
@@ -44,19 +68,50 @@ class ListingViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         
         
-        return 50
+        return self.listings.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ListingCell", for: indexPath) as! ListingCell
-        cell.titleLabel.text = "Listing #\(indexPath[1] + 1)"
-        cell.descriptionLabel.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        cell.priceLabel.text = "$10.00"
-        cell.sender_label.text = "Posted by Avi Patel"
         
-        let posterUrl = URL(string: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXw3NjA4Mjc3NHx8ZW58MHx8fHw%3D&w=1000&q=80")
-        cell.productImage.af.setImage(withURL: posterUrl!)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ListingCell", for: indexPath) as! ListingCell
+        let listing = self.listings[indexPath.row]
+        
+        let user_id = listing["user_id"] as? String ?? ""
+        let userRef = Firestore.firestore().collection("users").document(user_id)
+        userRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let dataDescription = document.data()
+                print("Document data: \(dataDescription)")
+                cell.titleLabel.text = listing["listingTitle"] as? String ?? ""
+                cell.descriptionLabel.text = listing["descrip"] as? String ?? ""
+                cell.priceLabel.text = "$\(listing["price"]!)"
+                
+                
+                let username = dataDescription?["name"] as? String ?? ""
+                cell.sender_label.text = "Posted by \(username)"
+                let PriorUse = listing["PriorUse"] as? String ?? ""
+                let age = "\(listing["age"]!) Years Old"
+                let itemsSold = "\((dataDescription?["itemsSold"])!) Items Sold"
+                let condition = listing["condition"] as? String ?? ""
+                cell.detailsLabel.text = "\(PriorUse) \u{2022} \(age) \u{2022} \(itemsSold) \u{2022} \(condition)"
+                guard let url = URL(string: "\(listing["image"] as? String ?? "")") else {
+                    print("can't get image url")
+                    cell.productImage.image = UIImage(named: "image_placeholder")!
+                    return
+                }
+                
+                cell.productImage.af.setImage(withURL: url)
+                
+            } else {
+                print("Document does not exist")
+            }
+        }
+
+        
+        
+        
+        
 
         // Configure the cell...
 
@@ -99,14 +154,22 @@ class ListingViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if let cell = sender as? UITableViewCell {
+            let indexPath = tableView.indexPath(for: cell)!
+            let listing = listings[indexPath.row]
+            let itemViewerViewController = segue.destination as! ItemViewerViewController
+            itemViewerViewController.listing = listing
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
+        
     }
-    */
+    
 
 }
