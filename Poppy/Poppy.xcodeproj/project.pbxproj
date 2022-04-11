@@ -19,7 +19,6 @@
 		7A4FA0AC27FA980D0071ACFE /* ListingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4FA0AB27FA980D0071ACFE /* ListingCell.swift */; };
 		7A506CF827FA132C00F791F9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A506CF727FA132C00F791F9 /* LoginViewController.swift */; };
 		7A506CFA27FA1ECF00F791F9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A506CF927FA1ECF00F791F9 /* SignUpViewController.swift */; };
-		7AA848BA280348DE00A6E95F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7AA848B9280348DE00A6E95F /* GoogleService-Info.plist */; };
 		A31635EE27F25CE00029077E /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A31635ED27F25CE00029077E /* FirebaseAnalytics */; };
 		A31635F027F25CE00029077E /* FirebaseAnalyticsSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = A31635EF27F25CE00029077E /* FirebaseAnalyticsSwift-Beta */; };
 		A31635F227F25CE00029077E /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = A31635F127F25CE00029077E /* FirebaseAnalyticsWithoutAdIdSupport */; };
@@ -50,6 +49,8 @@
 		A316362427F25CE00029077E /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = A316362327F25CE00029077E /* FirebaseStorageSwift-Beta */; };
 		D23C12BF27FCC41A0077BE51 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = D23C12BE27FCC41A0077BE51 /* AlamofireImage */; };
 		D23E07CA27FF5CEF00A1B5F3 /* ItemViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23E07C927FF5CEF00A1B5F3 /* ItemViewerViewController.swift */; };
+		D254BE722804CF28001D6796 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D254BE712804CF28001D6796 /* GoogleService-Info.plist */; };
+		D254BE742804D40A001D6796 /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254BE732804D40A001D6796 /* NewPostViewController.swift */; };
 		D2AC95C327FF580B00014F94 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AC95C227FF580B00014F94 /* PostViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -87,8 +88,9 @@
 		7A4FA0AB27FA980D0071ACFE /* ListingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingCell.swift; sourceTree = "<group>"; };
 		7A506CF727FA132C00F791F9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7A506CF927FA1ECF00F791F9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		7AA848B9280348DE00A6E95F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D23E07C927FF5CEF00A1B5F3 /* ItemViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewerViewController.swift; sourceTree = "<group>"; };
+		D254BE712804CF28001D6796 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D254BE732804D40A001D6796 /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
 		D2AC95C227FF580B00014F94 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,6 +151,7 @@
 		7A0C0AFE27F2561600567393 = {
 			isa = PBXGroup;
 			children = (
+				D254BE712804CF28001D6796 /* GoogleService-Info.plist */,
 				7A0C0B0927F2561600567393 /* Poppy */,
 				7A0C0B2027F2561600567393 /* PoppyTests */,
 				7A0C0B2A27F2561600567393 /* PoppyUITests */,
@@ -169,10 +172,10 @@
 		7A0C0B0927F2561600567393 /* Poppy */ = {
 			isa = PBXGroup;
 			children = (
-				7AA848B9280348DE00A6E95F /* GoogleService-Info.plist */,
 				7A0C0B0A27F2561600567393 /* AppDelegate.swift */,
 				7A0C0B0C27F2561600567393 /* SceneDelegate.swift */,
 				7A0C0B1027F2561600567393 /* Main.storyboard */,
+				D254BE732804D40A001D6796 /* NewPostViewController.swift */,
 				D2AC95C227FF580B00014F94 /* PostViewController.swift */,
 				D23E07C927FF5CEF00A1B5F3 /* ItemViewerViewController.swift */,
 				7A506CF727FA132C00F791F9 /* LoginViewController.swift */,
@@ -343,7 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A0C0B1727F2561600567393 /* LaunchScreen.storyboard in Resources */,
-				7AA848BA280348DE00A6E95F /* GoogleService-Info.plist in Resources */,
+				D254BE722804CF28001D6796 /* GoogleService-Info.plist in Resources */,
 				7A0C0B1427F2561600567393 /* Assets.xcassets in Resources */,
 				7A0C0B1227F2561600567393 /* Main.storyboard in Resources */,
 			);
@@ -375,6 +378,7 @@
 				7A506CF827FA132C00F791F9 /* LoginViewController.swift in Sources */,
 				D2AC95C327FF580B00014F94 /* PostViewController.swift in Sources */,
 				7A0C0B0B27F2561600567393 /* AppDelegate.swift in Sources */,
+				D254BE742804D40A001D6796 /* NewPostViewController.swift in Sources */,
 				7A506CFA27FA1ECF00F791F9 /* SignUpViewController.swift in Sources */,
 				7A0C0B0D27F2561600567393 /* SceneDelegate.swift in Sources */,
 				7A4FA0AA27FA4BB60071ACFE /* ListingViewController.swift in Sources */,
