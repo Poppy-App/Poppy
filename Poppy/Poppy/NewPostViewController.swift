@@ -8,10 +8,9 @@
 import UIKit
 import Firebase
 import FirebaseStorage
+import AlamofireImage
 
-class NewPostViewController: UIViewController {
-
-    @IBOutlet weak var imageView: UIImageView!
+class NewPostViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var descriptionBox: UITextView!
     
@@ -23,13 +22,42 @@ class NewPostViewController: UIViewController {
     
     @IBOutlet weak var priceBox: UITextField!
     
+    @IBOutlet weak var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        conditionChoice.changesSelectionAsPrimaryAction = true
+        conditionChoice.showsMenuAsPrimaryAction = true
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func cameraOpen(_ sender: Any) {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            picker.sourceType = .camera
+        } else {
+            picker.sourceType = .photoLibrary
+        }
+        
+        present(picker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+           let image = info[.editedImage] as! UIImage
+           let size = CGSize(width: 230, height: 230)
+        let scaledImage = image.af.imageAspectScaled(toFill: size)
+           imageView.image = scaledImage
+           dismiss(animated: true, completion: nil)
+       }
+    
+    
+    @IBAction func onPost(_ sender: Any) {
+        
+    }
+    
     /*
     // MARK: - Navigation
 
