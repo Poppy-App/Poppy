@@ -199,6 +199,9 @@ Poppy allows college students to skip the hassles associated with selling and bu
   
   ### Sprint 2 Progress GIF
   <img src='Poppy_Sprint2.gif' title='Video Walkthrough' width=250 alt='Video Walkthrough' />
+  
+  ### Sprint 3 Progress GIF
+  <img src='Poppy_Sprint03.gif' title='Video Walkthrough' width=250 alt='Video Walkthrough' />
 
 
 
