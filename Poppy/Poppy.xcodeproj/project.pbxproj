@@ -47,9 +47,9 @@
 		A316362027F25CE00029077E /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = A316361F27F25CE00029077E /* FirebaseStorage */; };
 		A316362227F25CE00029077E /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = A316362127F25CE00029077E /* FirebaseStorageCombine-Community */; };
 		A316362427F25CE00029077E /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = A316362327F25CE00029077E /* FirebaseStorageSwift-Beta */; };
+		A35EBC9F280A528B00834C91 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A35EBC9E280A528B00834C91 /* GoogleService-Info.plist */; };
 		D23C12BF27FCC41A0077BE51 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = D23C12BE27FCC41A0077BE51 /* AlamofireImage */; };
 		D23E07CA27FF5CEF00A1B5F3 /* ItemViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23E07C927FF5CEF00A1B5F3 /* ItemViewerViewController.swift */; };
-		D254BE722804CF28001D6796 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D254BE712804CF28001D6796 /* GoogleService-Info.plist */; };
 		D254BE742804D40A001D6796 /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254BE732804D40A001D6796 /* NewPostViewController.swift */; };
 		D2AC95C327FF580B00014F94 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AC95C227FF580B00014F94 /* PostViewController.swift */; };
 /* End PBXBuildFile section */
@@ -88,8 +88,8 @@
 		7A4FA0AB27FA980D0071ACFE /* ListingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingCell.swift; sourceTree = "<group>"; };
 		7A506CF727FA132C00F791F9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7A506CF927FA1ECF00F791F9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		A35EBC9E280A528B00834C91 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D23E07C927FF5CEF00A1B5F3 /* ItemViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewerViewController.swift; sourceTree = "<group>"; };
-		D254BE712804CF28001D6796 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D254BE732804D40A001D6796 /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
 		D2AC95C227FF580B00014F94 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,7 +151,6 @@
 		7A0C0AFE27F2561600567393 = {
 			isa = PBXGroup;
 			children = (
-				D254BE712804CF28001D6796 /* GoogleService-Info.plist */,
 				7A0C0B0927F2561600567393 /* Poppy */,
 				7A0C0B2027F2561600567393 /* PoppyTests */,
 				7A0C0B2A27F2561600567393 /* PoppyUITests */,
@@ -172,6 +171,7 @@
 		7A0C0B0927F2561600567393 /* Poppy */ = {
 			isa = PBXGroup;
 			children = (
+				A35EBC9E280A528B00834C91 /* GoogleService-Info.plist */,
 				7A0C0B0A27F2561600567393 /* AppDelegate.swift */,
 				7A0C0B0C27F2561600567393 /* SceneDelegate.swift */,
 				7A0C0B1027F2561600567393 /* Main.storyboard */,
@@ -346,7 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A0C0B1727F2561600567393 /* LaunchScreen.storyboard in Resources */,
-				D254BE722804CF28001D6796 /* GoogleService-Info.plist in Resources */,
+				A35EBC9F280A528B00834C91 /* GoogleService-Info.plist in Resources */,
 				7A0C0B1427F2561600567393 /* Assets.xcassets in Resources */,
 				7A0C0B1227F2561600567393 /* Main.storyboard in Resources */,
 			);
@@ -560,7 +560,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LT63HJW9N8;
+				DEVELOPMENT_TEAM = 2W5432Q58K;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Poppy/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -588,7 +588,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LT63HJW9N8;
+				DEVELOPMENT_TEAM = 2W5432Q58K;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Poppy/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
