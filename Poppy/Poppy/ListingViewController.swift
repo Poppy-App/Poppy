@@ -48,8 +48,19 @@ class ListingViewController: UITableViewController {
                 return
             }
             for document in QuerySnapshot!.documents {
-                self.listings.append(document.data())
+                let filler = UserDefaults.standard.integer(forKey: "Filter")
                 
+                if(filler == 0){
+                    self.listings.append(document.data())
+                } else if (filler == 1){
+                    if (document.data()["PriorUse"] as! String == "New") {
+                        self.listings.append(document.data())
+                    }
+                } else {
+                    if (document.data()["PriorUse"] as! String == "Used") {
+                        self.listings.append(document.data())
+                    }
+                }
             }
             self.tableView.reloadData()
         }
@@ -79,6 +90,8 @@ class ListingViewController: UITableViewController {
         
         let user_id = listing["user_id"] as? String ?? ""
         let userRef = Firestore.firestore().collection("users").document(user_id)
+        var condition2 = ""
+                
         userRef.getDocument { (document, error) in
             if let document = document, document.exists {
                 let dataDescription = document.data()
@@ -94,6 +107,9 @@ class ListingViewController: UITableViewController {
                 let age = "\(listing["age"]!) Years Old"
                 let itemsSold = "\((dataDescription?["itemsSold"])!) Items Sold"
                 let condition = listing["condition"] as? String ?? ""
+//                print(PriorUse)
+//                condition2 = PriorUse
+//                print(condition2)
                 cell.detailsLabel.text = "\(PriorUse) \u{2022} \(age) \u{2022} \(itemsSold) \u{2022} \(condition)"
                 guard let url = URL(string: "\(listing["image"] as? String ?? "")") else {
                     print("can't get image url")
@@ -108,14 +124,11 @@ class ListingViewController: UITableViewController {
             }
         }
 
-        
-        
-        
-        
-
         // Configure the cell...
-
+        
+        //if(filler == 3){
         return cell
+        //}
     }
     
 

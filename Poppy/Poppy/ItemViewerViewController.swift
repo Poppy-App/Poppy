@@ -31,6 +31,22 @@ class ItemViewerViewController: UIViewController {
     
     @IBOutlet weak var itemsSold: UILabel!
     
+    var listerUID = "";
+    
+    @IBAction func venmoButton(_ sender: Any) {
+        Firestore.firestore().collection("users").document(listerUID).getDocument { snapshot, error in
+            if error != nil {
+                // ERROR
+                print("error")
+            }
+            else {
+                let userVemo = snapshot?.get("venmo") as! String
+                let venurl = "https://account.venmo.com/u/"
+                UIApplication.shared.open(URL(string: venurl + userVemo)! as URL, options: [:], completionHandler: nil)
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         itemNameLabel.text = listing["listingTitle"] as? String ?? ""
@@ -50,6 +66,11 @@ class ItemViewerViewController: UIViewController {
         ConditionLabel.text = condition
         
         let user_id = listing["user_id"] as? String ?? ""
+        
+        listerUID = user_id
+        print("oooga")
+        print(user_id)
+        
         let userRef = Firestore.firestore().collection("users").document(user_id)
         userRef.getDocument { (document, error) in
             if let document = document, document.exists {
@@ -60,8 +81,6 @@ class ItemViewerViewController: UIViewController {
                 self.schoolLabel.text = school
                 self.collegeYear.text = year
                 self.itemsSold.text = itemsSold_num
-                
-                
                 
             } else {
                 print("Document does not exist")

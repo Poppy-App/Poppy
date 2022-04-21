@@ -52,6 +52,7 @@
 		D23E07CA27FF5CEF00A1B5F3 /* ItemViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23E07C927FF5CEF00A1B5F3 /* ItemViewerViewController.swift */; };
 		D254BE742804D40A001D6796 /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254BE732804D40A001D6796 /* NewPostViewController.swift */; };
 		D2AC95C327FF580B00014F94 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AC95C227FF580B00014F94 /* PostViewController.swift */; };
+		D2DE46C828109D3900B641E9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DE46C728109D3900B641E9 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		D23E07C927FF5CEF00A1B5F3 /* ItemViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewerViewController.swift; sourceTree = "<group>"; };
 		D254BE732804D40A001D6796 /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
 		D2AC95C227FF580B00014F94 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		D2DE46C728109D3900B641E9 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 				7A0C0B0A27F2561600567393 /* AppDelegate.swift */,
 				7A0C0B0C27F2561600567393 /* SceneDelegate.swift */,
 				7A0C0B1027F2561600567393 /* Main.storyboard */,
+				D2DE46C728109D3900B641E9 /* SettingsViewController.swift */,
 				D254BE732804D40A001D6796 /* NewPostViewController.swift */,
 				D2AC95C227FF580B00014F94 /* PostViewController.swift */,
 				D23E07C927FF5CEF00A1B5F3 /* ItemViewerViewController.swift */,
@@ -376,6 +379,7 @@
 				7A4FA0AC27FA980D0071ACFE /* ListingCell.swift in Sources */,
 				D23E07CA27FF5CEF00A1B5F3 /* ItemViewerViewController.swift in Sources */,
 				7A506CF827FA132C00F791F9 /* LoginViewController.swift in Sources */,
+				D2DE46C828109D3900B641E9 /* SettingsViewController.swift in Sources */,
 				D2AC95C327FF580B00014F94 /* PostViewController.swift in Sources */,
 				7A0C0B0B27F2561600567393 /* AppDelegate.swift in Sources */,
 				D254BE742804D40A001D6796 /* NewPostViewController.swift in Sources */,

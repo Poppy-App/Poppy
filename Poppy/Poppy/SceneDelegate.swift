@@ -25,6 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let listingNavigationController = main.instantiateViewController(withIdentifier: "ListingNavigationController")
             window?.rootViewController = listingNavigationController
         }
+        UserDefaults.standard.set(0, forKey: "Filter")
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

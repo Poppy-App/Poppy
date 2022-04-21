@@ -24,6 +24,8 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var YearTextField: UITextField!
     
+    @IBOutlet weak var venmoTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -44,6 +46,7 @@ class SignUpViewController: UIViewController {
         let password = PasswordTextField.text!
         let school = SchoolTextField.text!
         let year = YearTextField.text!
+        let venmo = venmoTextField.text!
         
         
         Firebase.Auth.auth().createUser(withEmail: email, password: password) {
@@ -65,8 +68,8 @@ class SignUpViewController: UIViewController {
             user["name"] = name
             user["password"] = password
             user["year"] = year
-            
-            
+            user["venmo"] = venmo
+
             let db = Firestore.firestore()
             db.collection("users").document(res.user.uid).setData(user) { error in
                 if error != nil {
