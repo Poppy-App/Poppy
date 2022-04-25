@@ -105,7 +105,7 @@ class ListingViewController: UITableViewController {
                 cell.sender_label.text = "Posted by \(username)"
                 let PriorUse = listing["PriorUse"] as? String ?? ""
                 let age = "\(listing["age"]!) Years Old"
-                let itemsSold = "\((dataDescription?["itemsSold"])!) Items Sold"
+                let itemsSold = "\((dataDescription?["itemsSold"]) ?? 0) Items Sold"
                 let condition = listing["condition"] as? String ?? ""
 //                print(PriorUse)
 //                condition2 = PriorUse

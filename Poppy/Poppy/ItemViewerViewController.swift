@@ -24,6 +24,7 @@ class ItemViewerViewController: UIViewController {
     
     @IBOutlet weak var ConditionLabel: UILabel!
     
+    @IBOutlet weak var priceLabel: UILabel!
     
     @IBOutlet weak var schoolLabel: UILabel!
     
@@ -64,6 +65,7 @@ class ItemViewerViewController: UIViewController {
         usedOrNot.text = PriorUse
         Age.text = age
         ConditionLabel.text = condition
+        let price = "\u{2022} $\(listing["price"]!)"
         
         let user_id = listing["user_id"] as? String ?? ""
         
@@ -75,12 +77,13 @@ class ItemViewerViewController: UIViewController {
         userRef.getDocument { (document, error) in
             if let document = document, document.exists {
                 let dataDescription = document.data()
-                let itemsSold_num = "\u{2022} \((dataDescription?["itemsSold"])!) Items Sold"
+                let itemsSold_num = "\u{2022} \((dataDescription?["itemsSold"]) ?? 0) Items Sold"
                 let school = "\u{2022} School: \((dataDescription?["college"])!)"
                 let year = "\u{2022} Year: \((dataDescription?["year"])!)"
                 self.schoolLabel.text = school
                 self.collegeYear.text = year
                 self.itemsSold.text = itemsSold_num
+                self.priceLabel.text = price;
                 
             } else {
                 print("Document does not exist")

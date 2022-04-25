@@ -51,7 +51,7 @@ class SettingsViewController: UIViewController {
                 
                 self.nameText.text = self.name as! String
                 self.passwordText.text = self.password as! String
-                self.schoolText.text = self.password as! String
+                self.schoolText.text = self.school as! String
                 self.emailTExt.text = self.email as! String
                 self.yearText.text = self.year as! String
                 self.venmoText.text = self.venmo as! String
