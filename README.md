@@ -33,9 +33,9 @@ Poppy allows college students to skip the hassles associated with selling and bu
 - [X] View more information about listing
 - [X] Allow user to stay logged in
 - [X] Take pictures of a product and upload them to the platform along with description
-- [ ] Payment interface to allow users to pay others for their product
-- [ ] Filter by price and categories
-- [ ] Settings screen where user can change name and description about themselves
+- [X] Payment interface to allow users to pay others for their product
+- [X] Filter by new or used
+- [X] Settings screen where user can change name and other attributes
 
 **Optional Nice-to-have Stories**
 
